@@ -1,0 +1,20 @@
+<table class="table">
+  <tr>
+    <th class="table-primary">Correo</th>
+    <th class="table-success">Contraseña</th>
+    <th class="table-danger">#</th>
+  </tr>
+  <tr>
+    <th class="table-info"><input type="text" class="form-control bg-transparent btn-outline-dark" placeholder="Email" [(ngModel)]="usuario"  name="uname" required></th>
+    <th class="table-primary"><input type="password" class="form-control bg-transparent btn-outline-dark" placeholder="password" [(ngModel)]="clave" name="psw" required></th>
+    <th class="table-warning"><button type="button" class="btn btn-outline-dark">Users</button></th>
+  </tr>
+  <tr>
+    <th class="table-success"><button type="button" class="btn btn-outline-dark" *ngIf="logeando"  (click)="Login()">Conectarse</button></th>
+    <th class="table-info"><button type="button" class="btn btn-outline-dark" (click)="Registrar()">Registrarse</button></th>
+    <th class="table-success"></th>
+  </tr>
+  <tr>
+    <th colspan="3" class="table-secondary">{{mensaje}}</th>
+  </tr>
+</table>

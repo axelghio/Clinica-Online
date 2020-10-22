@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "clinica-online-87dea": {
+      "hosting": {
+        "Clinica-Online": [
+          "clinica-online-87dea"
+        ]
+      }
+    }
+  }
+}

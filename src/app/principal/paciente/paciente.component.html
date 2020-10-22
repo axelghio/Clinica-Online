@@ -1,0 +1,17 @@
+<!--Monstrar FOTO-->
+<div class="content-fotos">
+    <div *ngFor="let item of usuario">
+        <h5>Nombre: {{item.nombre}}</h5>
+        <h5>Apellido: {{item.apellido}}</h5>
+        <table>
+            <tr>
+                <th>
+                    <img src="{{item.foto1}}" height="220" >
+                </th>
+                <th>
+                    <img src="{{item.foto2}}" height="220" >
+                </th>
+            </tr>
+        </table>
+    </div>
+</div>
