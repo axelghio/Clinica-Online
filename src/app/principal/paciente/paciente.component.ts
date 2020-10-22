@@ -7,6 +7,9 @@ import { element } from 'protractor';
 //import service
 import { FirebaseService } from "../../servicios/firebase.service";
 
+//import router
+import { Router } from "@angular/router";
+
 @Component({
   selector: 'app-paciente',
   templateUrl: './paciente.component.html',
@@ -14,7 +17,7 @@ import { FirebaseService } from "../../servicios/firebase.service";
 })
 export class PacienteComponent implements OnInit {
   usuario;
-  constructor(private auth: FirebaseService, private db: AngularFireDatabase) { }
+  constructor(private auth: FirebaseService, private db: AngularFireDatabase, private router: Router) { }
 
   ngOnInit(): void {
     this.auth.traerUsuario()
@@ -27,5 +30,9 @@ export class PacienteComponent implements OnInit {
             this.usuario.push(x);
           });
         });
+  }
+
+  Volver(){
+    this.router.navigate(['/login']);
   }
 }
